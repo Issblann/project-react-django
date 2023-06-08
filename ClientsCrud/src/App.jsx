@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ListPage from "./pages/ListPage";
 import FormPage from "./pages/FormPage";
 import Home from "./pages/Home";
-import Header from "./components/header/Header";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
