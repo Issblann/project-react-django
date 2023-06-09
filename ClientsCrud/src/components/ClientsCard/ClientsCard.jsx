@@ -17,6 +17,7 @@ const ClientsCard = ({ client }) => {
     if (confirmDelete) {
       try {
         await deleteClients(client.id);
+        // deleteClient();
       } catch (err) {
         console.error("Error al eliminar la tarea", err);
       }

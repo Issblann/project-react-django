@@ -44,12 +44,16 @@ const ClientsForm = () => {
   const onSubmit = handleSubmit(async (data) => {
     if (id) {
       await updateClients(id, data);
-      console.log("texto", data);
     } else {
       const res = await createClients(data);
     }
     navigate("/client/list");
   });
+
+  const handleCancel = () => {
+    // console.log("cancelado");
+    navigate("/client/list");
+  };
 
   return (
     <section className="w-full flex items-center gap-3 flex-col px-4 justify-center m-auto ">
@@ -105,8 +109,12 @@ const ClientsForm = () => {
         </div>
 
         <div className=" w-[90%] justify-end items-end py-2 flex gap-3">
-          <button className="p-2 bg-red-500 text-white">Cancelar</button>
-          <button className="p-2 bg-blue-500 text-white">Guardar</button>
+          <button className="p-2 bg-red-500 text-white" onClick={handleCancel}>
+            Cancelar
+          </button>
+          <button type="submit" className="p-2 bg-blue-500 text-white">
+            Guardar
+          </button>
         </div>
       </form>
     </section>
