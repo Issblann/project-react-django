@@ -11,11 +11,10 @@ const ClientList = () => {
   useEffect(() => {
     async function loadClients() {
       const res = await getAllClients();
-      // console.log(res);
       setClients(res.data);
     }
     loadClients();
-  }, []);
+  }, [clients]);
 
   return (
     <section className="w-full mt-8 flex flex-col bg-slate-500 px-4 py-3 items-center justify-center">
@@ -25,7 +24,6 @@ const ClientList = () => {
         </h1>
         <Link
           to="/client/create"
-          onClick={() => resetValue}
           className="p-3 bg-blue-500 text-white flex items-center gap-2"
         >
           <span>

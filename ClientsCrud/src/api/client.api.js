@@ -14,4 +14,4 @@ export const createClients = (client) => {
 export const getClient = (id) => clientApi.get(`/${id}`);
 export const deleteClients = (id) => clientApi.delete(`/${id}`);
 
-export const updateClients = (id, client) => clientApi.put(`/${id}`, client);
+export const updateClients = (id, client) => clientApi.put(`/${id}/`, client);
